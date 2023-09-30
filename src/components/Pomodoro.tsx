@@ -20,7 +20,7 @@ const getSecond = (second: number) => {
 }
 
 export default function Pomodoro() {
-    const POMO_TOTAL = 3;
+    const POMO_TOTAL = 25 * 60;
     const [pomoTime, setPomoTime] = useState(POMO_TOTAL);
     const [isTimerWork, setIsTimerWork] = useState(false);
 
@@ -58,9 +58,9 @@ export default function Pomodoro() {
             <Title>Pomodoro</Title>
             <div>
                 <h2>Timer</h2>
-                <span>{getMinutes(pomoTime)}</span>
+                <span>{getMinutes(pomoTime) < 10 ? `0${getMinutes(pomoTime)}` : getMinutes(pomoTime)}</span>
                 <span>:</span>
-                <span>{getSecond(pomoTime)}</span>
+                <span>{getSecond(pomoTime) < 10 ? `0${getSecond(pomoTime)}` : getSecond(pomoTime)}</span>
             </div>
             {
                 isTimerWork ?
