@@ -1,17 +1,12 @@
 import { atom } from "recoil";
 
-export const isDarkAtom = atom({
-    key: "isDark",//유일해야함
-    default: false,
-})
-
 export const isTimerWorkAtom = atom({
     key: "isTimerWork",
     default: false
 })
 
-// export const POMO_TOTAL = 25 * 60;
-export const POMO_TOTAL = 5;
+export const POMO_TOTAL = 25 * 60;
+// export const POMO_TOTAL = 5;
 export const pomoTimeAtom = atom({
     key: "pomoTime",
     default: POMO_TOTAL,
