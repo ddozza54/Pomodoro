@@ -18,12 +18,16 @@ export default function RoundRecord() {
     }, [pomoTime, POMO_TOTAL])
 
     return (
-        <div>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center"
+        }}>
             <div>
                 <span>{round}</span>
                 <span>/{ROUND_TOTAL}</span>
-                <span>Round</span>
             </div>
+            <span>Round</span>
         </div>
     );
 }
